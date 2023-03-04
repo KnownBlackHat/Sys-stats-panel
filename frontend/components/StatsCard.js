@@ -20,14 +20,14 @@ export default function StatsCard ({WSURL}) {
 		}
 		func()
 		return() => {socket.current.disconnect()}
-	}, [])
+	}, [WSURL])
 
 
 
 	return (
 		Object.keys(Data).length!==0 &&
-		<div className="m-2 border-2 rounded transition-all delay-500 bg-gradient-to-r from-red-600 to-blue-900">
-		<ul className="flex flex-wrap justify-between p-4 mx-4 font-bold text-center">
+		<div className="m-2 border-2 rounded transition-all delay-500 bg-contain bg-cover bg-no-repeat bg-[url('https://source.unsplash.com/2000x600/?server')]">
+		<ul className="flex flex-wrap mb-4 justify-between bg-black/70 border-black border-2 rounded p-4 font-bold text-center">
 		<li>Host: {Data.hostname}</li>
 		<li>OS: {Data.platform} ({Data.release})</li>
 		<li>Uptime: {Data.uptime}</li>

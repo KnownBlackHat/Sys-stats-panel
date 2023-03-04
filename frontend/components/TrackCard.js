@@ -4,11 +4,11 @@ export default function TrackCard ({name, percent, used, total}) {
 
 return (
 	<>
-		<div className="flex items-center justify-center p-4 bg-black border-2 rounded-full md:h-40">
+		<div className="flex items-center justify-center p-4 bg-black/70 border-2 border-black rounded-full md:h-40">
 			<div className="flex flex-col md:flex-row">
-				<div className="rounded-full flex items-start h-28 md:w-40 w-60 justify-center px-4 mx-0.5 my-0.5">
+				<span className="rounded-full flex items-start h-28 md:w-40 w-60 justify-center px-4 mx-0.5 my-0.5">
 					<div className="flex-col">
-						<div className={`my-2 text-sm font-medium text-${percent>=90?"red":(percent>=50?"yellow":"green")}-400`}>{name}</div>
+						<span className={`my-2 text-sm font-medium text-${percent>=90?"red":(percent>=50?"yellow":"green")}-400`}>{name}</span>
 						<div className="flex items-center class">
 							<div className={`flex items-center justify-between mx-2 px-0.5 py-0.5 rounded-xl text-${percent>=90?"red":(percent>=50?"yellow":"green")}-400 font-medium`}>
 								<div className="text-3xl font-bold">{percent}%</div>
@@ -19,7 +19,7 @@ return (
 								{used && `${used} / ${total}`}
 						</div>
 					</div>
-				</div>
+				</span>
 			</div>
 		</div>
 		<Script src="https://kit.fontawesome.com/290d4f0eb4.js"></Script>
