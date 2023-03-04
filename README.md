@@ -27,11 +27,11 @@ Now copy paste following in respective directories
 
 #### Frontend Setup
 ```bash
-npm i && npm run build && echo "[+] Great! Frontend Setup Done"
+echo "[=] Running Frontend Setup" && npm i > /dev/null && npm run build > /dev/null && echo "[+] Great! Frontend Setup Done"
 ```
 #### Backend Setup
 ```bash
-npm i && echo "[+] Great! Frontend Setup Done"
+echo "[=] Running Backend Setup" && npm i > /dev/null && echo "[+] Great! Frontend Setup Done"
 ```
 ### How To Get It Working?
 #### Starting Frontend !
@@ -40,5 +40,5 @@ npm run start
 ```
 #### Starting Backend !
 ```bash
-nodemon infoserver.js
+node infoserver.js
 ```
