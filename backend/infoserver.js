@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
 			hostname: os.hostname(),
 			release: os.release(),
 			uptime: calculateUpTime(),
-			platform: os.type(),
+
 			
 			totalmem: (os.totalmem()/(1024*1024)).toFixed(0)+" MiB",
 			usedmem: ((os.totalmem() - os.freemem())/(1024*1024)).toFixed(0)+" MiB",
