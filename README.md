@@ -30,6 +30,7 @@ Now copy paste following in respective directories
 echo "[=] Running Frontend Setup" && npm i > /dev/null && npm run build > /dev/null && echo "[+] Great! Frontend Setup Done"
 ```
 #### Backend Setup
+**NOTE: Add a server.crt(SSL Certificates) and server.key(SSL Key) file in current directory**
 ```bash
 echo "[=] Running Backend Setup" && npm i > /dev/null && echo "[+] Great! Frontend Setup Done"
 ```
