@@ -29,7 +29,7 @@ export default function StatsCard ({WSURL}) {
 		<div className="m-2 border-2 rounded transition-all delay-500 bg-contain bg-cover bg-no-repeat bg-[url('https://source.unsplash.com/2000x600/?server')]">
 		<ul className="flex flex-wrap mb-4 justify-between bg-black/70 border-black border-2 rounded p-4 font-bold text-center">
 		<li>Host: {Data.hostname}</li>
-		<li>OS: {Data.platform} ({Data.release})</li>
+		<li>OS: {Data.platform} </li>
 		<li>Uptime: {Data.uptime}</li>
 
 		</ul>
