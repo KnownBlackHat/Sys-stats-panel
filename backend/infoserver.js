@@ -23,7 +23,7 @@ io.on('connection', (socket) => {
 	socket.on('statsreq', () => {
 		socket.volatile.emit("statsres",{
 			hostname: os.hostname(),
-			release: os.release(),
+			platform: os.type(),
 			uptime: calculateUpTime(),
 
 			
