@@ -8,6 +8,7 @@ node_modules
 # testing
 coverage
 
+.next
 
 # misc
 .DS_Store
