@@ -9,6 +9,10 @@ export default function StatsCard ({WSURL}) {
     const [Data, setData] = useState({})
     const socket = useRef()
 
+    setTimeout(() => {
+        ConnectionStatus==="Initiating"?setConnectionStatus("Down"):null;
+    }, 12000)
+
     useEffect(() => {
         const SocksInit = async () => {
             socket.current = io(WSURL);
@@ -18,9 +22,13 @@ export default function StatsCard ({WSURL}) {
             
             socket.current.on("connect", () => {
                 setConnectionStatus("Up") 
+                clearTimeout(SocksTimeOut)
             } )
 
-            setTimeout(() => {setConnectionStatus("Down")}, 10000)
+            const SocksTimeOut = setTimeout(() => {
+                setConnectionStatus("Down")
+                socket.current.close()
+            }, 10000)
 
             socket.current.on("disconnect", () => {
                 setConnectionStatus("Down")
