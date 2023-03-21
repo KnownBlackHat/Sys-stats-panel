@@ -1,0 +1,15 @@
+FROM ubuntu:latest
+
+# Copy files
+COPY . /backend
+WORKDIR /backend
+
+# Install dependencies
+RUN apt update -y && apt install -y \
+    nodejs \
+    npm 
+RUN npm install -g nodemon
+RUN npm install package.json
+
+EXPOSE 3000
+ENTRYPOINT ["nodemon", "infoserver.js"]
